@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #023b6d;
+    padding: 0 20px;
+}
+
+::selection {
+    color: #fff;
+    background: #023b6d;
+}
+
+.wrapper {
+    max-width: 450px;
+    margin: 150px auto;
+}
+
+.wrapper .input-search {
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.input-search input {
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-search.active input {
+    border-radius: 5px 5px 0 0;
+}
+
+.input-search .autocomplete-box {
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.input-search.active .autocomplete-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocomplete-box li {
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.input-search.active .autocomplete-box li {
+    display: block;
+}
+
+.autocomplete-box li:hover {
+    background: #efefef;
+}
+
+.input-search .search_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #023b6d;
+    cursor: pointer;
+}
+
+#city-aqi-container {
+    display: table;
+    margin: 0 auto;
+}
